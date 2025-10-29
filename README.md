@@ -1,10 +1,11 @@
 # 🤖 Automation Exercise - Trabalho Final
 
-**Disciplina:** Automação de Testes na Camada de Interface (WEB)\*\*  
-**Professor:** Samuel Lucas\*\*  
-**Autora:** Kelly Fiochi\*\*  
-**Framework:** Cypress (JavaScript)\*\*  
-**Relatórios:** Mochawesome (HTML + JSON)
+- **Disciplina:** Automação de Testes na Camada de Interface (WEB)
+
+- **Professor:** Samuel Lucas
+- **Autora:** Kelly Fiochi
+- **Framework:** Cypress (JavaScript)
+- **Relatórios:** Mochawesome (HTML + JSON)
 
 ---
 
