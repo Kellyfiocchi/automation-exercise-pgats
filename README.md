@@ -1,10 +1,10 @@
 # 🤖 Automation Exercise - Trabalho Final
 
-**Disciplina:** Automação de Testes na Camada de Interface (WEB)  
-**Professor:** Samuel Lucas  
-**Autora:** Kelly Fiochi  
-**Framework:** Cypress (JavaScript)  
-**Relatórios:** Mochawesome
+**Disciplina:** Automação de Testes na Camada de Interface (WEB)\*\*  
+**Professor:** Samuel Lucas\*\*  
+**Autora:** Kelly Fiochi\*\*  
+**Framework:** Cypress (JavaScript)\*\*  
+**Relatórios:** Mochawesome (HTML + JSON)
 
 ---
 
@@ -19,18 +19,18 @@ Cada funcionalidade (`login`, `signup`, `contact`, `products`, `subscription`, `
 
 ## 🧩 Casos Implementados
 
-| Caso     | Descrição                                 |
-| -------- | ----------------------------------------- |
-| **TC01** | Register User                             |
-| **TC02** | Login User (credenciais válidas)          |
-| **TC03** | Login User (credenciais inválidas)        |
-| **TC04** | Logout User                               |
-| **TC05** | Register User com e-mail existente        |
-| **TC06** | Contact Us Form                           |
-| **TC08** | Verify All Products e Product Detail Page |
-| **TC09** | Search Product                            |
-| **TC10** | Verify Subscription in Home Page          |
-| **TC15** | Place Order: Register before Checkout     |
+| Caso     | Descrição                                        |
+| -------- | ------------------------------------------------ |
+| **TC01** | Registrar novo usuário                           |
+| **TC02** | Login de usuário com credenciais válidas         |
+| **TC03** | Login de usuário com credenciais inválidas       |
+| **TC04** | Logout de usuário                                |
+| **TC05** | Registrar usuário com e-mail já existente        |
+| **TC06** | Formulário “Contact Us”                          |
+| **TC08** | Verificar lista de produtos e página de detalhes |
+| **TC09** | Pesquisar produto                                |
+| **TC10** | Verificar inscrição na página inicial            |
+| **TC15** | Realizar pedido: registrar antes do checkout     |
 
 ---
 
@@ -55,3 +55,23 @@ Cada funcionalidade (`login`, `signup`, `contact`, `products`, `subscription`, `
    ```bash
    npx cypress run --browser chrome --headless
    ```
+
+## 🚀 Integração Contínua (GitHub Actions)
+
+Este projeto utiliza GitHub Actions para execução automática dos testes em cada push ou pull request na branch main.
+
+O workflow realiza as seguintes etapas:
+
+- Instala as dependências (npm install)
+
+- Executa os testes Cypress em modo headless
+
+- Gera e salva o relatório Mochawesome como artefato
+
+## 📄 Arquivo do workflow:
+
+.github/workflows/tests.yml
+
+O relatório HTML pode ser baixado diretamente no GitHub:
+
+Actions → Cypress Tests → Artifacts → cypress-html-report
