@@ -1,4 +1,4 @@
-name: Run Cypress Tests
+name: Cypress Tests
 
 on:
   push:
@@ -24,14 +24,14 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Run Cypress (headless)
         run: npx cypress run --browser chrome --headless
 
-      - name: Upload Cypress Mochawesome Report
+      - name: Upload Cypress HTML report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: mochawesome-report
-          path: automation-exercise-test/cypress/reports/mochawesome-report/
+          name: cypress-html-report
+          path: automation-exercise-test/cypress/reports
