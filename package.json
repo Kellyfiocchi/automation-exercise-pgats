@@ -1,0 +1,19 @@
+{
+  "name": "automation-exercise-test",
+  "version": "1.0.0",
+  "description": "Projeto Final Individual - Automation Exercise (Kelly Fiochi)",
+  "author": "Kelly Fiochi",
+  "license": "MIT",
+  "scripts": {
+    "open": "npx cypress open",
+    "test:headless": "npx cypress run --browser chrome --headless",
+    "test:ui": "npx cypress open",
+    "test:checkout": "npx cypress run --spec 'cypress/e2e/modules/checkout/checkout.cy.js' --browser chrome --headless",
+    "report": "npx mochawesome-merge cypress/reports/*.json > mochawesome.json && npx marge mochawesome.json --reportDir cypress/reports/mochawesome-report"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^10.1.0",
+    "cypress": "^13.7.0",
+    "cypress-mochawesome-reporter": "^4.0.2"
+  }
+}
