@@ -17,16 +17,14 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 20
 
       - name: Install dependencies
         run: |
-          cd automation-exercise-test
-          npm install
+          npm install --engine-strict=false
 
       - name: Run Cypress (headless)
         run: |
-          cd automation-exercise-test
           npx cypress run --browser chrome --headless
 
       - name: Upload Cypress HTML report
@@ -34,4 +32,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: cypress-html-report
-          path: automation-exercise-test/cypress/reports/
+          path: cypress/reports/
