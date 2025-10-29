@@ -1,0 +1,37 @@
+name: Run Cypress Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: ./automation-exercise-test
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Cypress (headless)
+        run: npx cypress run --browser chrome --headless
+
+      - name: Upload Cypress Mochawesome Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mochawesome-report
+          path: automation-exercise-test/cypress/reports/mochawesome-report/
