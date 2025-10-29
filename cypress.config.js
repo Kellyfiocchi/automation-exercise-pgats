@@ -4,7 +4,7 @@ module.exports = defineConfig({
   e2e: {
     baseUrl: "https://automationexercise.com",
     video: false,
-    reporter: "cypress-mochawesome-reporter", // 👈 troca aqui
+    reporter: "cypress-mochawesome-reporter",
     reporterOptions: {
       reportDir: "cypress/reports",
       charts: true,

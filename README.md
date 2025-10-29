@@ -38,6 +38,20 @@ Cada funcionalidade (`login`, `signup`, `contact`, `products`, `subscription`, `
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/<seu-usuario>/automation-exercise-test.git
-   cd automation-exercise-test
+   git clone https://github.com/Kellyfiocchi/automation-exercise-pgats.git
+   cd automation-exercise-pgats
+   ```
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+3. Execute os testes em modo interativo:
+
+   ```bash
+   npx cypress open
+   ```
+
+4. Ou execute os testes em modo headless (terminal):
+   ```bash
+   npx cypress run --browser chrome --headless
    ```
